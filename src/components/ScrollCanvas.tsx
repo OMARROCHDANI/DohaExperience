@@ -86,22 +86,34 @@ export const ScrollCanvas: React.FC<ScrollCanvasProps> = ({
       const dpr = window.devicePixelRatio || 1;
       canvas.width = window.innerWidth * dpr;
       canvas.height = window.innerHeight * dpr;
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
       renderFrame(Math.round(state.currentFrame));
     };
 
     const tick = () => {
       const diff = state.targetFrame - state.currentFrame;
 
-      if (Math.abs(diff) < 0.005) {
+      if (Math.abs(diff) < 0.1) {
         state.currentFrame = state.targetFrame;
         renderFrame(Math.round(state.currentFrame));
         state.isAnimating = false;
-      } else {
-        // Adjust 0.03 to control smoothing speed (lower = smoother/slower, higher = faster response)
-        state.currentFrame += diff * 0.03;
-        renderFrame(Math.round(state.currentFrame));
-        requestAnimationFrame(tick);
+        return;
       }
+
+      // Smooth inertia factor (0.04 provides a very smooth float)
+      let step = diff * 0.04;
+
+      // Enforce a minimum speed for the final frames. 
+      // 0.4 frames/tick = ~24fps minimum, preventing the "slow 3 jumps" stagger.
+      const minStep = 0.4;
+      if (Math.abs(step) < minStep) {
+        step = Math.sign(diff) * Math.min(minStep, Math.abs(diff));
+      }
+
+      state.currentFrame += step;
+      renderFrame(Math.round(state.currentFrame));
+      requestAnimationFrame(tick);
     };
 
     const updateScroll = () => {

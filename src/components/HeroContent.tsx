@@ -26,7 +26,7 @@ export const HeroContent: React.FC<HeroContentProps> = ({ onPlanTrip }) => {
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full mb-4 sm:mb-5 text-[11px] sm:text-xs md:text-sm text-white/85 select-none group"
+        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full mb-4 sm:mb-5 text-xs sm:text-sm text-white/85 select-none group"
       >
         <span className="text-white text-xs leading-none">✦</span>
         {isEditingAgency ? (
@@ -79,7 +79,7 @@ export const HeroContent: React.FC<HeroContentProps> = ({ onPlanTrip }) => {
         initial={{ opacity: 0, y: 18 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-        className="text-white font-medium text-2xl sm:text-3xl md:text-4xl lg:text-[3.15rem] xl:text-[3.5rem] leading-[1.14] tracking-[-0.03em] max-w-3xl mx-auto mb-5 sm:mb-6"
+        className="text-white font-medium text-4xl sm:text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.12] tracking-tight max-w-3xl mx-auto mb-5 sm:mb-6"
       >
         <span className="block">Discover Doha,</span>
         <span className="block">Experience Luxury,</span>
@@ -97,7 +97,7 @@ export const HeroContent: React.FC<HeroContentProps> = ({ onPlanTrip }) => {
         <button
           id="hero-plan-trip-cta"
           onClick={onPlanTrip}
-          className="group relative inline-flex items-center justify-center gap-2 bg-white text-black font-semibold text-xs sm:text-sm px-4.5 sm:px-5.5 py-2 sm:py-2.5 rounded-full transition-all duration-300 hover:bg-neutral-100 hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_20px_rgba(255,255,255,0.14)] cursor-pointer"
+          className="group relative inline-flex items-center justify-center gap-1.5 sm:gap-2 bg-white text-black font-semibold text-xs sm:text-sm px-4 sm:px-7 py-2.5 sm:py-3 min-h-[40px] sm:min-h-[44px] rounded-full transition-all duration-300 hover:bg-neutral-100 hover:scale-[1.03] active:scale-[0.98] shadow-[0_0_20px_rgba(255,255,255,0.14)] cursor-pointer"
         >
           <span>Plan Your Trip</span>
           <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black stroke-[2.4] transition-transform duration-300 group-hover:translate-x-0.5" />

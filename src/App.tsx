@@ -82,9 +82,9 @@ export default function App() {
             <h1 className="font-serif text-4xl sm:text-5xl tracking-[0.3em] sm:tracking-[0.5em] text-white font-light uppercase mb-12 ml-4 opacity-90">
               Doha
             </h1>
-            
+
             <div className="w-full relative h-[1px] bg-white/10 mb-8 overflow-hidden rounded-full">
-              <div 
+              <div
                 className="absolute top-0 left-0 h-full bg-white transition-all duration-300 ease-out shadow-[0_0_10px_rgba(255,255,255,0.8)]"
                 style={{ width: `${loadingProgress}%` }}
               >
@@ -92,7 +92,7 @@ export default function App() {
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 w-8 h-[2px] bg-white blur-[2px]" />
               </div>
             </div>
-            
+
             <div className="flex justify-center items-center w-full text-white/40 font-sans text-[10px] tracking-widest uppercase">
               <span>Preparing Journey</span>
             </div>
@@ -116,7 +116,7 @@ export default function App() {
         </div>
 
         {/* SECTION 2: Moments Worth Remembering */}
-        <RegenerativeSection />
+        {/* <RegenerativeSection /> */}
 
         {/* SECTION 3: Benefits & What's In It For You Glassmorphism Section */}
         <BenefitsSection onLearnMore={() => setSelectedDrawerTab('Services')} />
