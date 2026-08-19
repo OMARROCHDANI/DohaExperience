@@ -24,7 +24,7 @@ export const StatsSection: React.FC<StatsSectionProps> = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-7 group relative min-h-[380px] sm:min-h-[460px] lg:min-h-[520px] flex flex-col justify-between p-6 sm:p-8 md:p-10 rounded-[26px] bg-black border border-white/[0.12] hover:border-white/[0.3] transition-all duration-300 shadow-[0_16px_40px_rgba(0,0,0,0.6)] overflow-hidden"
+            className="lg:col-span-7 group relative min-h-[380px] sm:min-h-[460px] lg:min-h-[520px] flex flex-col justify-between p-6 sm:p-8 md:p-10 rounded-[26px] border border-white/[0.12] hover:border-white/[0.25] transition-all duration-300 shadow-[0_8px_32px_rgba(0,0,0,0.2)] overflow-hidden"
           >
             {/* Background Image */}
             <div 
@@ -35,11 +35,11 @@ export const StatsSection: React.FC<StatsSectionProps> = ({
                 backgroundPosition: 'center',
               }}
             />
-            {/* Velvet Overlay */}
-            <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#140108]/95 via-[#260511]/40 to-black/30 pointer-events-none rounded-[26px]" />
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20 pointer-events-none rounded-[26px]" />
             
             {/* Inner subtle specular light reflection */}
-            <div className="absolute inset-0 bg-gradient-to-b from-[#99284f]/20 to-transparent pointer-events-none rounded-[26px] z-10" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none rounded-[26px] z-10" />
 
             {/* Top-Right Button: ↗ Start your journey */}
             <div className="flex justify-end w-full relative z-10">

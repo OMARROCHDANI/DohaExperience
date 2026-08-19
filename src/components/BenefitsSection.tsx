@@ -85,7 +85,7 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({ onLearnMore })
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15 * idx }}
-              className="group relative h-[420px] sm:h-[480px] flex flex-col justify-end rounded-[22px] bg-black border border-white/[0.12] hover:border-white/[0.25] transition-all duration-500 shadow-[0_16px_40px_rgba(0,0,0,0.6)] overflow-hidden"
+              className="group relative h-[420px] sm:h-[480px] flex flex-col justify-end rounded-[22px] border border-white/[0.08] hover:border-white/[0.18] transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.15)] overflow-hidden"
             >
               {/* Background Image */}
               <div 
@@ -97,19 +97,19 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({ onLearnMore })
                 }}
               />
               
-              {/* Gradual Blur Overlay */}
+              {/* Gradual Blur Overlay — stronger glassmorphism */}
               <div 
                 className="absolute inset-0 z-10 pointer-events-none"
                 style={{
-                  backdropFilter: 'blur(24px)',
-                  WebkitBackdropFilter: 'blur(24px)',
-                  maskImage: 'linear-gradient(to bottom, transparent 67%, black 100%)',
-                  WebkitMaskImage: 'linear-gradient(to bottom, transparent 67%, black 100%)'
+                  backdropFilter: 'blur(32px) saturate(1.4)',
+                  WebkitBackdropFilter: 'blur(32px) saturate(1.4)',
+                  maskImage: 'linear-gradient(to bottom, transparent 45%, black 90%)',
+                  WebkitMaskImage: 'linear-gradient(to bottom, transparent 45%, black 90%)'
                 }}
               />
               
-              {/* Velvet tint overlay for readability */}
-              <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-transparent via-[#260511]/40 to-[#140108]/95" />
+              {/* Subtle tint overlay for readability */}
+              <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-transparent via-black/20 to-black/60" />
 
               {/* Bottom Content */}
               <div className="relative z-20 p-6 sm:p-7 flex flex-col transition-transform duration-700 ease-out group-hover:-translate-y-2">
@@ -130,8 +130,8 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({ onLearnMore })
                 <div className="w-8 h-[1px] bg-white/30 mt-6 group-hover:w-full group-hover:bg-white/70 transition-all duration-700 ease-out" />
               </div>
 
-              {/* Inner subtle specular light reflection with velvet tint */}
-              <div className="absolute inset-0 bg-gradient-to-b from-[#99284f]/20 to-transparent pointer-events-none rounded-[22px] z-30 opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
+              {/* Inner subtle specular light reflection */}
+              <div className="absolute inset-0 bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none rounded-[22px] z-30 opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
             </motion.div>
           ))}
         </div>
