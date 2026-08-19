@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
 import { Navbar } from './components/Navbar';
@@ -51,18 +51,18 @@ export default function App() {
     }
   };
 
-  const handleLoadingProgress = (progress: number) => {
+  const handleLoadingProgress = useCallback((progress: number) => {
     setLoadingProgress(progress);
-  };
+  }, []);
 
-  const handleLoaded = () => {
+  const handleLoaded = useCallback(() => {
     setTimeout(() => {
       setIsLoading(false);
       setTimeout(() => {
         setIsPreloaderVisible(false);
       }, 800); // Match index.css preloader transition duration
     }, 400); // Tiny buffer for smoothness
-  };
+  }, []);
 
   return (
     <main
