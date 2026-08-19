@@ -23,7 +23,7 @@ export const ScrollCanvas: React.FC<ScrollCanvasProps> = ({
 
   const getFramePath = (index: number) => {
     const paddedIndex = index.toString().padStart(3, '0');
-    return `/frames/ezgif-frame-${paddedIndex}.jpg`;
+    return `/frames/ezgif-frame-${paddedIndex}.webp`;
   };
 
   useEffect(() => {

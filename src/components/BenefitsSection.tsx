@@ -11,25 +11,25 @@ export const BenefitsSection: React.FC<BenefitsSectionProps> = ({ onLearnMore })
       id: '01',
       title: 'Tailored experiences',
       description: 'Every journey is designed around your interests, pace, and way of travelling.',
-      imageUrl: '/images/card_tailored.jpg',
+      imageUrl: '/images/card_tailored.webp',
     },
     {
       id: '02',
       title: 'Local expertise',
       description: 'Discover Doha through experiences chosen by people who know Qatar best.',
-      imageUrl: '/images/card_local.jpg',
+      imageUrl: '/images/card_local.webp',
     },
     {
       id: '03',
       title: 'Seamless planning',
       description: 'From accommodation to activities, we make every part of your trip effortless.',
-      imageUrl: '/images/card_seamless.jpg',
+      imageUrl: '/images/card_seamless.webp',
     },
     {
       id: '04',
       title: 'Unforgettable moments',
       description: "Go beyond sightseeing and create memories you'll carry long after you leave.",
-      imageUrl: '/images/card_unforgettable.jpg',
+      imageUrl: '/images/card_unforgettable.webp',
     },
   ];
 

@@ -30,7 +30,7 @@ export const StatsSection: React.FC<StatsSectionProps> = ({
             <div 
               className="absolute inset-0 z-0 transition-transform duration-700 group-hover:scale-105"
               style={{
-                backgroundImage: 'url(/images/card_stats_left_1787082927802.jpg)',
+                backgroundImage: 'url(/images/card_stats_left_1787082927802.webp)',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}
