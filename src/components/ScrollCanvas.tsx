@@ -97,8 +97,8 @@ export const ScrollCanvas: React.FC<ScrollCanvasProps> = ({
         renderFrame(Math.round(state.currentFrame));
         state.isAnimating = false;
       } else {
-        // Adjust 0.08 to control smoothing speed (lower = smoother/slower, higher = faster response)
-        state.currentFrame += diff * 0.08;
+        // Adjust 0.03 to control smoothing speed (lower = smoother/slower, higher = faster response)
+        state.currentFrame += diff * 0.03;
         renderFrame(Math.round(state.currentFrame));
         requestAnimationFrame(tick);
       }
